@@ -59,7 +59,7 @@ function App() {
                 <Route path="/old-users" element={<OldUsers />} />
                 <Route path="/new-users" element={<NewUsers />} />
                 <Route
-                  path="/shifted-died-users"
+                  path="/shifted-expired-users"
                   element={<ShiftedDiedUsers />}
                 />
                 <Route

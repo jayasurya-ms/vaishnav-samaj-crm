@@ -496,7 +496,7 @@ const OldUsers = () => {
               value={newStatus}
               onChange={(value) => setNewStatus(value)}
             >
-              <Select.Option value="Died">Died</Select.Option>
+              <Select.Option value="Expired">Expired</Select.Option>
               <Select.Option value="Shifted">Shifted</Select.Option>
             </Select>
           </div>
