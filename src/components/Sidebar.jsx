@@ -44,9 +44,9 @@ const getMenuItems = (collapsed, userTypeRaw) => {
     { key: "/old-users", icon: <TeamOutlined />, label: "Old Users" },
     { key: "/new-users", icon: <UsergroupAddOutlined />, label: "New Users" },
     {
-      key: "/shifted-died-users",
+      key: "/shifted-expired-users",
       icon: <UsergroupDeleteOutlined />,
-      label: "Shifted/Died Users",
+      label: "Shifted/Expired",
     },
   ];
 
