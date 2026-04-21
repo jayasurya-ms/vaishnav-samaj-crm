@@ -14,6 +14,14 @@ export const OLD_USERS_BY_UID = `/panel-fetch-old-users`;
 export const RELATION_OLD_USERS_BY_UID = `/panel-fetch-relation-old-users`;
 //RELATION_OLD_USERS_BY_UID
 export const DUPLICATE_OLD_USERS_BY_UID = `/panel-fetch-duplicate-old-users`;
+//PANEL_UPDATE_OLD_USERS_MOBILE
+export const PANEL_UPDATE_OLD_USERS_MOBILE = `/panel-update-old-users-mobile`;
+//PANEL_UPDATE_OLD_USERS_STATUS
+export const PANEL_UPDATE_OLD_USERS_STATUS = `/panel-update-old-users-status`;
+//NEW_USERS
+export const NEW_USERS = `/panel-fetch-new-users-list`;
+//SHIFTED_DIED_USERS
+export const SHIFTED_DIED_USERS = `/panel-fetch-old-users-dead-shifted-list`;
 //UPDATE_PROFILE
 export const UPDATE_PROFILE = `/panel-update-profile`;
 //PANEL_LOGIN
