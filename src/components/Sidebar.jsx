@@ -7,6 +7,10 @@ import {
   LockOutlined,
   MailOutlined,
   SolutionOutlined,
+  TeamOutlined,
+  UsergroupAddOutlined,
+  UsergroupDeleteOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
 import { Alert, Menu } from "antd";
 import { motion } from "framer-motion";
@@ -23,7 +27,7 @@ const getMenuItems = (collapsed, userTypeRaw) => {
   if (isOnlyuser) {
     const dashboardItems = [
       { key: "/home", icon: <HomeOutlined />, label: "Dashboard" },
-      { key: "/profile", icon: <HomeOutlined />, label: "Profile" },
+      { key: "/profile", icon: <UserOutlined />, label: "Profile" },
     ];
 
     if (collapsed) {
@@ -37,18 +41,28 @@ const getMenuItems = (collapsed, userTypeRaw) => {
     { key: "/home", icon: <HomeOutlined />, label: "Dashboard" },
   ];
   const olddUserItems = [
-    { key: "/old-users", icon: <HomeOutlined />, label: "Old Users" },
+    { key: "/old-users", icon: <TeamOutlined />, label: "Old Users" },
+    { key: "/new-users", icon: <UsergroupAddOutlined />, label: "New Users" },
+    {
+      key: "/shifted-died-users",
+      icon: <UsergroupDeleteOutlined />,
+      label: "Shifted/Died Users",
+    },
   ];
 
-  const managementChildren = [
+  const memberItems = [
     { key: "/life-member", icon: <LockOutlined />, label: "Life Membership" },
-    {
-      key: "/patron",
-      icon: <SolutionOutlined />,
-      label: "Patron",
-    },
-    { key: "/dy-patron", icon: <CarOutlined />, label: "Dy Patron" },
   ];
+
+  //  const managementChildren = [
+  //     { key: "/life-member", icon: <LockOutlined />, label: "Life Membership" },
+  //     {
+  //       key: "/patron",
+  //       icon: <SolutionOutlined />,
+  //       label: "Patron",
+  //     },
+  //     { key: "/dy-patron", icon: <CarOutlined />, label: "Dy Patron" },
+  //   ];
   const midIssued =
     uType === 3
       ? [{ key: "/mid-issued", icon: <IdcardOutlined />, label: "MID Issued" }]
@@ -58,12 +72,12 @@ const getMenuItems = (collapsed, userTypeRaw) => {
     return [
       ...dashboardItems,
       ...olddUserItems,
-      {
-        key: "sub",
-        icon: <MailOutlined />,
-        label: "Management",
-        children: managementChildren,
-      },
+      // {
+      //   key: "sub",
+      //   icon: <MailOutlined />,
+      //   label: "Management",
+      //   children: managementChildren,
+      // },
       ...midIssued,
     ];
   }
@@ -76,12 +90,13 @@ const getMenuItems = (collapsed, userTypeRaw) => {
       type: "group",
       label: "Member",
       children: [
-        {
-          key: "sub",
-          icon: <MailOutlined />,
-          label: "Member",
-          children: managementChildren,
-        },
+        // {
+        //   key: "sub",
+        //   icon: <MailOutlined />,
+        //   label: "Member",
+        //   children: managementChildren,
+        // },
+        ...memberItems,
       ],
     },
     midIssued.length > 0
@@ -250,7 +265,7 @@ export default function Sidebar({ collapsed, isMobile = false, onClose }) {
                     </span>
                   </div>
                   <div className="text-[11px] font-normal text-gray-500 mt-1">
-                    Updated on: 12-03-2025
+                    Updated on: 21-04-2026
                   </div>
                 </div>
               }
